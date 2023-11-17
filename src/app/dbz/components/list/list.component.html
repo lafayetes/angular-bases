@@ -1,0 +1,26 @@
+<h4>Listado</h4>
+<!--Para obtener el indice de una lista en el ngfor se coloca el ; seguido de let i=index-->
+<!-- Otros detalles del ngfor es que se puede obtener el first y el last de la lista, even, etc -->
+<ul class="list-group">
+  <li *ngFor="
+  let character of characterList;
+  let i = index;
+  let isFisrt =first;
+  let isLast = last;
+  let isEven = even;
+  let isOdd = odd;"
+  class="list-group-item"
+  [ngClass]="{
+    'list-group-item list-group-item-primary':isLast,
+
+  }">
+
+    <span class="text-primary">{{ i + 1 }}. </span>
+
+    <span>{{character.name}}</span> -
+
+    <strong>Power: </strong>
+
+    <span>{{character.power}}</span>
+  </li>
+</ul>
