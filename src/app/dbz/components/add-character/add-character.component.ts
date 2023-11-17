@@ -8,8 +8,7 @@ import { Character } from '../../interfaces/character.interface';
   styleUrl: './add-character.component.css'
 })
 export class AddCharacterComponent {
-  @
-    Output()
+  @Output()
   public onNewCharacter: EventEmitter<Character> = new EventEmitter();
 
   public character: Character = {
@@ -23,6 +22,6 @@ export class AddCharacterComponent {
     if (this.character.name.length === 0) return;
 
     this.onNewCharacter.emit(this.character);
-    this.character = { name: '', power: 0 }
+    this.character={name:'',power:0}
   }
 }
